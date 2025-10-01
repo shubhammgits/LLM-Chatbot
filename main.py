@@ -1,8 +1,11 @@
 import os
+import time
 
 import streamlit as st
 from dotenv import load_dotenv
 import google.generativeai as genai
+from google.api_core import exceptions
+
 
 load_dotenv()
 
@@ -15,7 +18,7 @@ st.set_page_config(
 
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel('gemini-1.5-pro-latest')
+model = genai.GenerativeModel('gemini-pro-latest')
 
 
 def translate_role_for_streamlit(user_role):
