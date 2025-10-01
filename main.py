@@ -6,7 +6,6 @@ import google.generativeai as genai
 
 load_dotenv()
 
-
 st.set_page_config(
     page_title="Chat with Gemini",
     page_icon="🤖",
@@ -14,3 +13,17 @@ st.set_page_config(
     initial_sidebar_state="auto"
 )
 
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+genai.configure(api_key=GOOGLE_API_KEY)
+model = genai.GenerativeModel('gemini-1.5-pro-latest')
+
+
+def translate_role_for_streamlit(user_role):
+    if user_role == "model":
+        return "assistant"
+    else:
+        return user_role
+    
+
+if "chat_session" not in st.session_state:
+    st.session_state.chat_session = model.start_chat(history=[])
