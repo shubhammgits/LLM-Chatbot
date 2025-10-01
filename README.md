@@ -2,7 +2,7 @@
 
 A conversational AI chatbot built using Python, Streamlit, and the powerful Google Gemini Pro API. This application provides a clean, responsive user interface for interacting with the Gemini model, maintaining a full conversation history for context-aware responses.
 
-<h3 align="center">✨ <a href="https://my-gemini-pro-chatbot.streamlit.app/"><strong>Live Demo on Streamlit Cloud</strong></a> ✨</h3>
+<h3 align="center"><a href="https://my-gemini-pro-chatbot.streamlit.app/"><strong>Live Demo on Streamlit Cloud</strong></a></h3>
 
 ## 📖 About The Project
 
@@ -116,5 +116,4 @@ Follow these steps to set up and run the project on your local machine.
 
 Feel free to reach out if you have any questions or just want to connect!
 
-- **Shubham Kumar**
 - **LinkedIn:** [https://www.linkedin.com/in/shhshubham/](https://www.linkedin.com/in/shhshubham/)
