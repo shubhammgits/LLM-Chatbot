@@ -27,3 +27,10 @@ def translate_role_for_streamlit(user_role):
 
 if "chat_session" not in st.session_state:
     st.session_state.chat_session = model.start_chat(history=[])
+
+st.title("🤖 Chat with Gemini")
+
+for message in st.session_state.chat_session.history:
+    with st.chat_message(translate_role_for_streamlit(message.role)):
+        st.markdown(message.parts[0].text)
+
