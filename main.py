@@ -34,3 +34,11 @@ for message in st.session_state.chat_session.history:
     with st.chat_message(translate_role_for_streamlit(message.role)):
         st.markdown(message.parts[0].text)
 
+user_prompt = st.chat_input("Type your message here...")
+if user_prompt:
+    st.chat_message("user").markdown(user_prompt)
+
+    gemini_response = st.session_state.chat_session.send_message(user_prompt)
+
+    with st.chat_message("assistant"):
+        st.markdown(gemini_response.text)
